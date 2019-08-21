@@ -1,0 +1,87 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage{listings}
+\usepackage{subfiles}
+
+\title{Introduction to elm}
+\author{Thomas Vandeven}
+\institute{London Functional Programmers}
+\date{\today}
+\usetheme{Boadilla}
+
+\newenvironment{codeexample}{
+    \begin{example}}{\end{example}}
+\newcommand{\rar}{\rightarrow}
+\newcommand{\bigpicture}{
+    \frame{\tableofcontents[currentsection,hideallsubsections]}
+}
+
+\begin{document}
+    \frame{\titlepage}
+
+% -- OUTLINE
+
+    \begin{frame}
+        \frametitle{Outline}
+        \tableofcontents[hideallsubsections]
+    \end{frame}
+
+%-- Intro
+    \section{Introduction}
+    \bigpicture
+    \begin{frame}
+        \subsection{Introduction: What is elm}
+        \frametitle{Introducing elm}
+        \begin{itemize}
+        \item{Elm is a functional programmming language designed 
+        by Evan Czaplicki in 2012 for making GUIs.}
+
+        \item{It transpiles to javascript and is used to
+        write web applications.}
+        \end{itemize}
+    \end{frame}
+
+%-- WHY ELM
+    \begin{frame}
+        \frametitle{Why Elm}
+
+        Elm is about:
+
+        \begin{itemize}
+            \item{No runtime errors in practice. No null.}
+            \item{Friendly error messages that make development easier}
+            \item{Well-architected code that stays well-architected as your app grows.}
+            \item{Automatically enforced semantic versioning for all Elm packages.}
+        \end{itemize}
+
+    \end{frame}
+
+    \section{Language Basics}
+    \bigpicture
+%-- ELM BASICS
+
+    %-- TYPES
+    
+    \subfile{types}
+    \subfile{types_continued}
+    \subfile{types_list}
+    \subfile{functions}
+    \subfile{records}
+    \subfile{custom_types}
+    \subfile{pattern_matching}
+
+    \section{The Elm Architecture}
+    \bigpicture
+    \subfile{tea_overview}
+    \subfile{side_effects}
+    \subfile{tea_image}
+
+
+    \section{Example Projects}
+    \bigpicture
+    \subfile{counter}
+    \subfile{cat_generator}
+\end{document}

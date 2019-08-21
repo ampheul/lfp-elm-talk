@@ -1,0 +1,17 @@
+\subsection{pattern matching}
+    \begin{frame}
+        \frametitle{pattern matching}
+        In elm we can match based on a pattern 
+        \begin{codeexample}
+            type Msg\\
+                $\quad$= A\\
+                $\quad\vert$ B \\
+        \end{codeexample}
+        \begin{codeexample}
+            pattern : Msg $\rar$ Int\\
+            pattern msg =\\
+                $\quad$case msg of\\
+                $\quad\quad A\rar 0$\\
+                $\quad\quad B \rar 1$\\
+        \end{codeexample}
+    \end{frame}
